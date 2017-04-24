@@ -2,8 +2,13 @@
     <string name="app_name">WroclawNaRolkach</string>
     <string name="wyjd">Wyjdź</string>
     <string name="opcje">Opcje</string>
-    <string name="poka_mapy">Pokaż mapy</string>
+    <string name="poka_mapy">Pokaż trasy</string>
     <string name="dodaj_trase">Dodaj trase</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-2389435775598003/7351545379</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ocena">Oceń</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
