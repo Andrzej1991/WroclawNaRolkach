@@ -1,5 +1,6 @@
 package com.company.andrzej.rolki.wroclawnarolkach;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,8 @@ import com.google.android.gms.ads.MobileAds;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static android.R.attr.value;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
     public void exitApplication() {
         presenter.exitApp(this);
     }
+
+    @OnClick(R.id.pokaz_mapy)
+    public void openMapsActivity() {
+        Intent myIntent = new Intent(MainActivity.this, MapsActivity.class);
+        myIntent.putExtra("key", value);
+        MainActivity.this.startActivity(myIntent);
+
+    }
+
 
     @Override
     public void onResume() {
