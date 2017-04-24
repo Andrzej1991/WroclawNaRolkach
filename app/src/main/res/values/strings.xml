@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WroclawNaRolkach</string>
+    <string name="wyjd">Wyjdź</string>
+    <string name="opcje">Opcje</string>
+    <string name="poka_mapy">Pokaż mapy</string>
+    <string name="dodaj_trase">Dodaj trase</string>
+</resources>
