@@ -1,5 +1,8 @@
 package com.company.andrzej.rolki.wroclawnarolkach;
 
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,10 +19,12 @@ import butterknife.OnClick;
 
 import static android.R.attr.value;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView;
     private MainActivityPresenter presenter;
+    private int mStackLevel = 0;
 
     @BindView(R.id.wyjdz)
     View exitApplication;
@@ -63,14 +68,28 @@ public class MainActivity extends AppCompatActivity {
         presenter.exitApp(this);
     }
 
+    void showDialog() {
+        mStackLevel++;
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+        if (prev != null) {
+            ft.remove(prev);
+        }
+        ft.addToBackStack(null);
+        DialogFragment newFragment = DialogChooseFragment.newInstance(mStackLevel);
+        newFragment.show(ft, "dialog");
+    }
+
     @OnClick(R.id.pokaz_mapy)
     public void openMapsActivity() {
+        showDialog();
+    }
+
+    public void openMapActivity() {
         Intent myIntent = new Intent(MainActivity.this, MapsActivity.class);
         myIntent.putExtra("key", value);
         MainActivity.this.startActivity(myIntent);
-
     }
-
 
     @Override
     public void onResume() {
