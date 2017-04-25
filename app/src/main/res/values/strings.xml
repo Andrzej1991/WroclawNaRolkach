@@ -11,4 +11,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ocena">Oceń</string>
     <string name="title_activity_maps">Map</string>
+    <string name="wybierz_tryb_trasy">Wybierz tryb trasy</string>
+    <string name="poka_wszystko">Pokaż wszystko</string>
+    <string name="fitness">Fitness</string>
+    <string name="freeride">Freeride</string>
+    <string name="hard">Trudna</string>
+    <string name="easy">Łatwa</string>
+    <string name="select_dificultyof_track">Wybierz trudność trasy</string>
+    <string name="medium">Średnia</string>
 </resources>

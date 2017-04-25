@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context="com.company.andrzej.rolki.wroclawnarolkach.DialogChooseFragment">
+
+    <TextView
+        android:id="@+id/naglowek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="@string/wybierz_tryb_trasy"
+        android:textColor="@android:color/black"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/freeride_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/freeride" />
+
+    <Button
+        android:id="@+id/fitness_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/fitness" />
+
+    <Button
+        android:id="@+id/buttonall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/poka_wszystko" />
+
+</LinearLayout>
