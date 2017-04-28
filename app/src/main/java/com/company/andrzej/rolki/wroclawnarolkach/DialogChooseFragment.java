@@ -13,7 +13,6 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
 public class DialogChooseFragment extends DialogFragment {
 
     @BindView(R.id.freeride_btn)
@@ -58,24 +57,9 @@ public class DialogChooseFragment extends DialogFragment {
     }
 
     private void configureButtons() {
-        freeride.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "freeride", Toast.LENGTH_SHORT).show();
-            }
-        });
-        fitness.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "freeride", Toast.LENGTH_SHORT).show();
-            }
-        });
-        buttonAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity) context).openMapActivity();
-            }
-        });
+        freeride.setOnClickListener(v -> Toast.makeText(context, "freeride", Toast.LENGTH_SHORT).show());
+        fitness.setOnClickListener(v -> Toast.makeText(context, "freeride", Toast.LENGTH_SHORT).show());
+        buttonAll.setOnClickListener(v -> ((MainActivity) context).openMapActivity());
     }
 
 

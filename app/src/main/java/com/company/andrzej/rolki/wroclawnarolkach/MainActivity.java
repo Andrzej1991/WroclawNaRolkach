@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         initializeAdMob();
-
         if (presenter == null) {
             presenter = new MainActivityPresenter();
         }
     }
+
 
     private void initializeAdMob() {
         MobileAds.initialize(this, "ca-app-pub-2389435775598003/7351545379");
